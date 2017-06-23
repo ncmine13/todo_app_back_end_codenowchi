@@ -1,15 +1,44 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    background-color:#142D2D;
+    color:white;
+}
+ul {
+    list-style-type: none;
+}
+
+li:hover {
+    background-color: #E1F7B9;
+    color: #3B88AD;
+    transform: scale(1.07);
+    width: 50%;
+    transition:0.4s all;
+}
+
+.title {
+    color:#76DA8A;
+}
+
+.pomodoro-estimate {
+    color: #E83F8B;
+    font-size:30px;
+}
+
+input {
+    border-radius:3px;
+    border: none;
+    padding:5px;
+}
+#new-todo-button{
+    color:#618CB6;
+    background-color:#EDEDCE;
+    padding:5px;
+}
+#new-todo-button:hover{
+  color: orange;
+  transform: scale(1.055);
+  transition: 0.2s all;
+}
+
+.completed-todo{
+  text-decoration: line-through;
+}
