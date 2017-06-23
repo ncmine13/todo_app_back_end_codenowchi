@@ -42,3 +42,7 @@ input {
 .completed-todo{
   text-decoration: line-through;
 }
+.showLink {
+    text-decoration: none;
+    color: white;
+}
