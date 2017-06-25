@@ -2,46 +2,16 @@
 
         <div>
             <h2><span class="title">Workshop</span> <span>To-do</span> <span class="title">List</span></h2>
+            <button><a href="new">Add new To-do</a></button>
             <ul>
-                <a href="show/1" class="showLink"><li><input id="checkBox" type="checkbox"> 
-                Buy laundry detergent, deoderant, toothpaste
-                <span class="pomodoro-estimate">2 Pomodoros</span>
-                </li></a>
-                
-                <a href="show/2" class="showLink"><li><input id="checkBox" type="checkbox"> 
-                Do some laundry
-                <span class="pomodoro-estimate">2 Pomodoros</span>
-                </li></a>
-                
-                <a href="show/3" class="showLink"><li><input id="checkBox" type="checkbox"> 
-                Wash dishes
-                <span class="pomodoro-estimate">2 Pomodoros</span>
-                </li></a>
-                
-                <a href="show/4" class="showLink"><li><input id="checkBox" type="checkbox"> tou
-                Find 10 more jobs to apply to
-                <span class="pomodoro-estimate">3 Pomodoros</span>
-                </li></a>
-                
-                <a href="show/5" class="showLink"><li><input id="checkBox" type="checkbox"> 
-                Finish current coding challenge
-                <span class="pomodoro-estimate">2 Pomodoros</span>
-                </li></a>
-                
-                <a href="show/6" class="showLink"><li><input id="checkBox" type="checkbox"> 
-                Talk to a boy
-                <span class="pomodoro-estimate">1 Pomodoro</span>
-                </li></a>
-                
-                <a href="show/7" class="showLink"><li><input id="checkBox" type="checkBox"> 
-                Relax
-                <span class="pomodoro-estimate">2 Pomodoros</span>
-                </li></a>
+                <% @list.each do |todo| %>
+                    <li>
+                        <a href="show/<%= todo.id %>" class="showLink">
+                        <input id="checkBox" type="checkbox">
+                        <%= todo.description %>
+                        <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
+                        </a>
+                    </li>
+                <% end %>
             </ul>  
         </div>
-        <div>
-            <input type="text" placeholder="Enter to-do"/>
-            <input type="number" placeholder="Duration"/>
-            <input id="new-todo-button" type="submit"/> 
-        </div>
-        
